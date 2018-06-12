@@ -1,0 +1,31 @@
+<li><a href="products.php">Paultry</a></li> 
+                </div> 
+                <div class="col-md-6 col-sm-6"> 
+                    <li><a href="products.php">Meat</a></li> 
+                </div> 
+            </div> 
+            <ul> 
+                </div> 
+                <!--        ft_border2--> 
+                <div class="col-md-4 col-sm-4 ftborder2"> 
+                    <p id="ftextdiv1">Useful Links</p> 
+                    <ul class="list-group list_block"> 
+                        <div class="col-md-12 col-sm-12"> 
+                            <div class="col-md-6 col-sm-6"> 
+                                <li><a href="about.php">About Us</a></li> 
+                            </div> 
+                            <div class="col-md-6 col-sm-6"> 
+                                <li><a id="contact_us_cursor" data-toggle="modal" datatarget="#modal_contact_us">Contact Us</a></li> 
+                            </div> 
+                        </div> 
+                        <div class="col-md-12 col-sm-12"> 
+                            <div class="col-md-6 col-sm-6"> 
+                                <li><a href="faq.php">FAQ</a></li> 
+                            </div> 
+                            <div class="col-md-6 col-sm-6"> 
+                                <li><a href="terms.php">Terms & Conditions</a></li> 
+                            </div> 
+                        </div> 
+                        <label id="email_status"></label> 
+ 
+ 
