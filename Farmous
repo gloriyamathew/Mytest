@@ -1,0 +1,29 @@
+Farmous booking
+<?php 
+require_once './core/user_header.php'; 
+require_once './config/config.php'; 
+require_once './core/Database.php'; 
+require_once './core/Hash.php'; 
+require_once './core/Session.php'; 
+require_once './public/data_access/data_fetcher_public.php'; 
+Session::init(); 
+//$db = new Database(DB_TYPE, DB_HOST, DB_NAME, DB_USER, DB_PASS); 
+$db = new Database(); 
+if (!isset($_SESSION['register_id'])) { 
+    header('location:login.php'); 
+} else { 
+    if (isset($_POST['add_product'])) { 
+        $reg_id = $_SESSION['register_id']; 
+        $far_id = $db->prepare("SELECT `fullname`, `phone` FROM `register` WHERE `register_id`='$reg_id'"); 
+        $far_id->execute(); 
+        $far_is = $get_suser->fetchAll(); 
+        $far_name = $far_is[0]['fullname']; 
+        $far_phone = $far_is[0]['phone']; 
+        $prd_name = $_POST['product_name']; 
+        $prd_category = $_POST['pr_category']; 
+        $prd_price = $_POST['price']; 
+        $prd_stock = $_POST['stock']; 
+        $prd_image = "upload_image/" . time() . "" . htmlspecialchars($_FILES['image']['name']); 
+        move_uploaded_file($_FILES['image']['tmp_name'], $prd_image); 
+        $prd_description = $_POST['description']; 
+        if (($prd_name === '') || ($prd_price === '') || ($prd_stock === '')) 
